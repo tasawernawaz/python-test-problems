@@ -1,0 +1,37 @@
+
+name: Validate PR
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  title-checker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: deepakputhraya/action-pr-title@master
+      with:
+        regex: '([a-z])+\/([a-z])+' # Regex the title should match.
+        allowed_prefixes: 'feature,fix,task' # title should start with the given prefix
+        disallowed_prefixes: 'feat/,hotfix' # title should not start with the given prefix
+        prefix_case_sensitive: false # title prefix are case insensitive
+        min_length: 5 # Min length of the title
+        max_length: 20 # Max length of the title
+        github_token: ${{ github.token }} # Default: ${{ github.token }}
+
+  quility-checker:
+    runs-on: ubuntu-latest
+    needs: [title-checker]
+    steps:
+      - name: Checkout code # checking our the code at current commit that triggers the workflow
+        uses: actions/checkout@v2
+      - name: Setup python environment # setting python environment to 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # if you want multiple python version run just use matrix strategy in job config. See the documentation of GitHub Actions
+      - name: Check Python version # checking the python version to see if 3.x is installed.
+        run: python --version
+      - name: Install requirements # install application requirements
+        run: pip install -r backend/requirements.txt
+      - name: Check Syntax # check code formatting
+        run: pycodestyle --statistics
