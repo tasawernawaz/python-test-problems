@@ -11,22 +11,23 @@
 # it should return None.
 
 def longest_repetition(li):
-  if len(li)==0: return 
-  currEle=li[1]
-  currCount=0
-  longestCount=0
-  longestEle=li[1]
-  for x in li:
-    if currCount>longestCount:
-      longestCount=currCount
-      longestEle=currEle
+    if len(li) == 0:
+        return
+    currEle = li[1]
+    currCount = 0
+    longestCount = 0
+    longestEle = li[1]
+    for x in li:
+        if currCount > longestCount:
+            longestCount = currCount
+            longestEle = currEle
 
-    if x==currEle:
-      currCount+=1
-    else:
-      currEle=x
-      currCount=1
-  return longestEle
+        if x == currEle:
+            currCount += 1
+        else:
+            currEle = x
+            currCount = 1
+    return longestEle
 
 # For example,
 
