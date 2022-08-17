@@ -14,24 +14,23 @@
 #
 
 def convert_seconds(number):
-  time=""
-  hrs=int((number)/3600)
-  mins=int( ( number - (hrs*3600) ) / 60 )
-  secs=int( ( number - (hrs*3600) - (mins*60) ) )
-  if hrs==1: 
-    time=time+str(hrs)+' hour '
-  else:
-    time=time+str(hrs)+' hours '
-  if mins==1:
-    time=time+str(mins)+' minute '
-  else:
-    time=time+str(mins)+" minutes "
-  if secs==1:
-    time=time+str(secs)+' second '
-  else:
-    time=time+str(secs)+' seconds '
-  return time
-
+    time = ''
+    hrs = int(number / 3600)
+    mins = int((number - hrs * 3600) / 60)
+    secs = int(number - hrs * 3600 - mins * 60)
+    if hrs == 1:
+        time = time + str(hrs) + ' hour '
+    else:
+        time = time + str(hrs) + ' hours '
+    if mins == 1:
+        time = time + str(mins) + ' minute '
+    else:
+        time = time + str(mins) + ' minutes '
+    if secs == 1:
+        time = time + str(secs) + ' second '
+    else:
+        time = time + str(secs) + ' seconds '
+    return time
 
 print convert_seconds(3661)
 # >>> 1 hour, 1 minute, 1 second
