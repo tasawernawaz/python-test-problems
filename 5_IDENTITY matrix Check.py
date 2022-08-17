@@ -10,16 +10,17 @@
 # (A square matrix is a matrix in which the number of rows 
 # is equal to the number of columns)
 
-def is_identity_matrix(matrix):
-    def is_identity_matrix(matrix):
-    import numpy as np
-    size=len(matrix)
-    identityMat=np.eye(size)
-    if np.array_equal(np.array(matrix),identityMat):
-      return True
-    else:
-      return False
+import numpy as np
 
+
+def is_identity_matrix(matrix):
+
+    size = len(matrix)
+    identityMat = np.eye(size)
+    if np.array_equal(np.array(matrix), identityMat):
+        return True
+    else:
+        return False
 
 # Test Cases:
 
