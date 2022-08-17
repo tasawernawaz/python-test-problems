@@ -29,16 +29,16 @@ ada_family = {'Judith Blunt-Lytton': ['Anne Isabella Blunt', 'Wilfrid Scawen Blu
 # does not matter and duplicates will be ignored.
 
 def ancestors(genealogy, person):
-  ancestory=[]
-  temp=[]
-  if person in genealogy:
-    ancestory.extend(genealogy[person])
-   
-  for ancestor in ancestory:
-    if ancestor in genealogy:
-      ancestory.extend(ancestors(genealogy, ancestor))
+    ancestory = []
+    temp = []
+    if person in genealogy:
+        ancestory.extend(genealogy[person])
 
-  return ancestory
+    for ancestor in ancestory:
+        if ancestor in genealogy:
+            ancestory.extend(ancestors(genealogy, ancestor))
+
+    return ancestory
 
 # Here are some examples:
 
