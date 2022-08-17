@@ -27,60 +27,62 @@
 # is given in megabytes (MB).
 
 def convert_seconds(number):
-  time=""
-  hrs=int((number)/3600)
-  mins=int( ( number - (hrs*3600) ) / 60 )
-  secs=int( ( number - (hrs*3600) - (mins*60) ) )
-  if hrs==1: 
-    time=time+str(hrs)+' hour '
-  else:
-    time=time+str(hrs)+' hours '
-  if mins==1:
-    time=time+str(mins)+' minute '
-  else:
-    time=time+str(mins)+" minutes "
-  if secs==1:
-    time=time+str(secs)+' second '
-  else:
-    time=time+str(secs)+' seconds '
-  return time
+    time = ''
+    hrs = int(number / 3600)
+    mins = int((number - hrs * 3600) / 60)
+    secs = int(number - hrs * 3600 - mins * 60)
+    if hrs == 1:
+        time = time + str(hrs) + ' hour '
+    else:
+        time = time + str(hrs) + ' hours '
+    if mins == 1:
+        time = time + str(mins) + ' minute '
+    else:
+        time = time + str(mins) + ' minutes '
+    if secs == 1:
+        time = time + str(secs) + ' second '
+    else:
+        time = time + str(secs) + ' seconds '
+    return time
 
-def download_time(filesize, fileUnit, BandWidth, BandWiddthUnit):
-  if fileUnit == 'kb':
-    filesize *= 2**10
-  elif fileUnit == 'kB': 
-    filesize *= 2**10*8
-  elif fileUnit== 'Mb': 
-    filesize *= 2**20
-  elif fileUnit == 'MB': 
-    filesize *= 2**20*8
-  elif fileUnit== 'Gb': 
-    filesize *= 2**30
-  elif fileUnit== 'GB': 
-    filesize *= 2**30*8
-  elif fileUnit== 'Tb': 
-    filesize *= 2**40
-  elif fileUnit == 'TB': 
-    filesize *= 2**40*8
+
+def download_time(filesize, fileUnit, BandWidth, BandWiddthUnit,):
     
-  if BandWiddthUnit == 'kb': 
-    BandWidth *= 2**10
-  elif BandWiddthUnit == 'kB': 
-    BandWidth *= 2**10*8
-  elif BandWiddthUnit == 'Mb': 
-    BandWidth *= 2**20
-  elif BandWiddthUnit == 'MB': 
-    BandWidth *= 2**20*8
-  elif BandWiddthUnit == 'Gb': 
-    BandWidth *= 2**30
-  elif BandWiddthUnit == 'GB': 
-    BandWidth *= 2**30*8
-  elif BandWiddthUnit == 'Tb': 
-    BandWidth *= 2**40
-  elif BandWiddthUnit == 'TB': 
-    BandWidth *= 2**40*8
+    if fileUnit == 'kb':
+        filesize *= 2 ** 10
+    elif fileUnit == 'kB':
+        filesize *= 2 ** 10 * 8
+    elif fileUnit == 'Mb':
+        filesize *= 2 ** 20
+    elif fileUnit == 'MB':
+        filesize *= 2 ** 20 * 8
+    elif fileUnit == 'Gb':
+        filesize *= 2 ** 30
+    elif fileUnit == 'GB':
+        filesize *= 2 ** 30 * 8
+    elif fileUnit == 'Tb':
+        filesize *= 2 ** 40
+    elif fileUnit == 'TB':
+        filesize *= 2 ** 40 * 8
 
-  return convert_seconds(filesize/BandWidth)
+    if BandWiddthUnit == 'kb':
+        BandWidth *= 2 ** 10
+    elif BandWiddthUnit == 'kB':
+        BandWidth *= 2 ** 10 * 8
+    elif BandWiddthUnit == 'Mb':
+        BandWidth *= 2 ** 20
+    elif BandWiddthUnit == 'MB':
+        BandWidth *= 2 ** 20 * 8
+    elif BandWiddthUnit == 'Gb':
+        BandWidth *= 2 ** 30
+    elif BandWiddthUnit == 'GB':
+        BandWidth *= 2 ** 30 * 8
+    elif BandWiddthUnit == 'Tb':
+        BandWidth *= 2 ** 40
+    elif BandWiddthUnit == 'TB':
+        BandWidth *= 2 ** 40 * 8
+
+    return convert_seconds(filesize / BandWidth)
     
 
 
