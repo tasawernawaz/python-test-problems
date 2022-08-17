@@ -28,8 +28,6 @@ def freq_analysis(message):
         freqList.append(occurances / total_letters)
     return freqList
 
-
-
 # Tests
 
 print freq_analysis("abcd")
