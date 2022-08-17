@@ -20,13 +20,14 @@ import string
 
 
 def freq_analysis(message):
-  total_letters=len(message)
-  freqList=[]
-  alphabet_string = string.ascii_lowercase
-  for alphabet in alphabet_string:
-    occurances=message.count(alphabet)
-    freqList.append(occurances/total_letters)
-  return freqList
+    total_letters = len(message)
+    freqList = []
+    alphabet_string = string.ascii_lowercase
+    for alphabet in alphabet_string:
+        occurances = message.count(alphabet)
+        freqList.append(occurances / total_letters)
+    return freqList
+
 
 
 # Tests
