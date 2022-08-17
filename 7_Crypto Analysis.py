@@ -16,15 +16,16 @@
 # The normalized frequency is simply the number of occurrences, i, 
 # divided by the total number of characters in the message, n.
 
+import string
+
+
 def freq_analysis(message):
-  def freq_analysis(message):
-  totalnum=len(message)
+  total_letters=len(message)
   freqList=[]
-  import string
   alphabet_string = string.ascii_lowercase
   for alphabet in alphabet_string:
     occurances=message.count(alphabet)
-    freqList.append(occurances/totalnum)
+    freqList.append(occurances/total_letters)
   return freqList
 
 
