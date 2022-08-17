@@ -13,26 +13,25 @@
 # Hint - "int()" turns a string's element into a number
 
 def numbers_in_lists(string):
-    def numbers_in_lists(string):
-    List=[]
-    sublist=[]
+    List = []
+    sublist = []
 
     for x in string:
-      num=int(x)
-      if len(List)==0: 
-        test=num
-        List.append(num)
-      elif num<=test:
-        sublist.append(num)
-      elif num>test:
-        if len(sublist)>0:List.append(sublist)
-        List.append(num)
-        test=num
-        sublist=[]
-    if len(sublist)>0: 
-      List.append(sublist)
+        num = int(x)
+        if len(List) == 0:
+            test = num
+            List.append(num)
+        elif num <= test:
+            sublist.append(num)
+        elif num > test:
+            if len(sublist) > 0:
+                List.append(sublist)
+            List.append(num)
+            test = num
+            sublist = []
+    if len(sublist) > 0:
+        List.append(sublist)
     return List
-
 
 # testcases
 string = '543987'
