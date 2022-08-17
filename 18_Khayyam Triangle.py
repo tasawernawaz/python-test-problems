@@ -28,20 +28,20 @@
 
 
 def triangle(n):
-  tri = []
-  for i in range(1, n + 1):
-      if i == 1: 
-        tri.append([1])
-      elif i == 2:
-        tri.append([1, 1])
-      else:
-          tmp = [1]
-          last = tri[len(tri) - 1]
-          for j in range(len(last) - 1):
-            tmp.append(last[j] + last[j + 1])
-          tmp.append(1)
-          tri.append(tmp)
-  return tri
+    tri = []
+    for i in range(1, n + 1):
+        if i == 1:
+            tri.append([1])
+        elif i == 2:
+            tri.append([1, 1])
+        else:
+            tmp = [1]
+            last = tri[len(tri) - 1]
+            for j in range(len(last) - 1):
+                tmp.append(last[j] + last[j + 1])
+            tmp.append(1)
+            tri.append(tmp)
+    return tri
 
 
 # For example:
