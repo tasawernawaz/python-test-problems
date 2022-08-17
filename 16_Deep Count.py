@@ -22,12 +22,12 @@ def is_list(p):
 # input is a List, and returns False otherwise.
 
 def deep_count(p):
-  deepCount=0
-  for i in p:
-    if is_list(i):
-      deepCount+=deep_count(i)
-    deepCount+=1
-  return deepCount
+    deepCount = 0
+    for i in p:
+        if is_list(i):
+            deepCount += deep_count(i)
+        deepCount += 1
+    return deepCount
 
 print deep_count([1, 2, 3])
 # >>> 3
