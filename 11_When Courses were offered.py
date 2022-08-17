@@ -63,12 +63,12 @@ def courses_offered(courses, hexamester):
 # representing the hexamesters when the input course is offered.
 
 def when_offered(courses, course):
-  hexamesters = []
-  for cour in courses:
-    offeredcourses = courses_offered(courses, cour)
-    if course in offeredcourses:
-      hexamesters.append(cour)
-  return hexamesters
+    hexamesters = []
+    for cour in courses:
+        offeredcourses = courses_offered(courses, cour)
+        if course in offeredcourses:
+            hexamesters.append(cour)
+    return hexamesters
 
 print when_offered(courses, 'cs101')
 # >>> ['apr2012', 'feb2012']
