@@ -14,14 +14,13 @@
 def is_list(p):
     return isinstance(p, list)
 
-
 def deep_reverse(p):
-  result = []
-  for i in reversed(p):
-    if is_list(i):
-        value = deep_reverse(i)
-    result.append(i)
-  return result
+    result = []
+    for i in reversed(p):
+        if is_list(i):
+            value = deep_reverse(i)
+        result.append(i)
+    return result
 
 
 # For example,
