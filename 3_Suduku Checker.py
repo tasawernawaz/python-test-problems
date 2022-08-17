@@ -62,25 +62,30 @@ incorrect5 = [[1, 1.5],
 matrix6 = [[1, 1.5, 3], [3, 1, 1.5], [1.5, 3, 1]]
 
 import numpy as np
+
 def check_sudoku(matrix):
-    size=len(matrix)
-    for row in matrix:
-      if all( [ isinstance(x,int) for x in row])== False:
+  size=len(matrix)
+  
+  for row in matrix:
+    if all( [ isinstance(x,int) for x in row])== False:
+      return False
+    elif max(row)>size:
+      return False
+        
+    elif len(np.unique(np.array(row)))!=size :
+      return False       
+             
+  for i in range(size):
+    mat=np.array(matrix)
+    col=mat[:,i]
+    if all( [ isinstance(x,int) for x in row])== False:
+      return False
+    elif max(col)>size:
         return False
-      elif max(row)>size:
-        return False
-      elif len(np.unique(np.array(row)))!=size :
-             return False
-    for i in range(size):
-      mat=np.array(matrix)
-      col=mat[:,i]
-      if all( [ isinstance(x,int) for x in row])== False:
-        return False
-      elif max(col)>size:
-        return False
-      elif len(np.unique(col))!=size :
-             return False
-    return True
+        
+    elif len(np.unique(col))!=size :
+     return False
+  return True
 
 
 print (check_sudoku(incorrect))
