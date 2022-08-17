@@ -5,19 +5,21 @@
 # procedure, symmetric, which takes a list as input, and returns the
 # boolean True if the list is symmetric and False if it is not.
 
-def symmetric(matrix):
-      
-  import numpy as np
-  mat=np.array(matrix)
-  for i in range(len(matrix)):
-    row=list(mat[i])
-    col=list(mat[:,i])
-    if row==col:
-      continue
-    else:
-      return False
+import numpy as np
 
-  return True
+
+def symmetric(matrix):
+
+    mat = np.array(matrix)
+    for i in range(len(matrix)):
+        row = list(mat[i])
+        col = list(mat[:, i])
+        if row == col:
+            continue
+        else:
+            return False
+
+    return True
 
 print symmetric([[1, 2, 3],
                  [2, 3, 4],
