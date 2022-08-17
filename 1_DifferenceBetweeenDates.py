@@ -7,13 +7,14 @@
 # Assume that the birthday and current date are correct dates. 
 #
 
+from datetime import timedelta, datetime
+
+
 def daysBetweenDates(year1, month1, day1, year2, month2, day2):
-    from datetime import timedelta,datetime
-    diff=datetime(year2,month2,day2)-datetime(year1,month1,day1)
-    days=diff.days
+
+    diff = datetime(year2, month2, day2) - datetime(year1, month1, day1)
+    days = diff.days
     return days
-
-
 
 # Test routine
 
