@@ -15,17 +15,17 @@
 
 
 def split_string(source, splitlist):
-    outputList=[]
-  word=""
-  for letter in source:
-    if letter in splitlist:
-      if len(word)>0:
-        outputList.append(word)
-      word=""
-      continue
-    else:
-      word=word+letter
-  return outputList
+    outputList = []
+    word = ''
+    for letter in source:
+        if letter in splitlist:
+            if len(word) > 0:
+                outputList.append(word)
+            word = ''
+            continue
+        else:
+            word = word + letter
+    return outputList
 
 
 out = split_string("This is a test-of the,string separation-code!", " ,!-")
