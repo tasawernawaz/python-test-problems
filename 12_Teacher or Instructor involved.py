@@ -68,19 +68,22 @@ def courses_offered(courses, hexamester):
 # list of courses that are offered that hexamester (the courses in the list 
 # can be in any order).
 
+
 def involved(courses, person):
-  hexamesters= {}
-  for cour in courses:
-    offeredcourses = courses_offered(courses, cour)
-    temp = []
-    for course in offeredcourses:
-      data = courses[cour][course]
-      for name in data:
-        if data[name] == person:
-          temp.append(course)
-        if len(temp) != 0:
-          hexamesters[cour] = temp
-  return hexamesters
+    hexamesters = {}
+    for cour in courses:
+        offeredcourses = courses_offered(courses, cour)
+        temp = []
+        for course in offeredcourses:
+            data = courses[cour][course]
+            for name in data:
+                if data[name] == person:
+                    temp.append(course)
+                if len(temp) != 0:
+                    hexamesters[cour] = temp
+    return hexamesters
+
+
 # For example:
 
 print involved(courses, 'Dave')
