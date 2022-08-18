@@ -16,8 +16,8 @@ import numpy as np
 def is_identity_matrix(matrix):
 
     size = len(matrix)
-    identityMat = np.eye(size)
-    if np.array_equal(np.array(matrix), identityMat):
+    identity_mat = np.eye(size)
+    if np.array_equal(np.array(matrix), identity_mat):
         return True
     else:
         return False
