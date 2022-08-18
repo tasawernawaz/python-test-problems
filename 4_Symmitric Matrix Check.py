@@ -14,10 +14,8 @@ def symmetric(matrix):
     for i in range(len(matrix)):
         row = list(mat[i])
         col = list(mat[:, i])
-        if row == col:
-            continue
-        else:
-            return False
+        if not row == col:
+           return False
 
     return True
 
