@@ -6,15 +6,7 @@
 # negative or zero.
 
 def shift_n_letters(letter, n):
-    asci = ord(letter) + n  # 97-122
-    if asci > 122:
-        dif = asci - 122
-        return chr(dif + 96)
-    if asci < 97:
-        dif = 97 - asci
-        return chr(123 - dif)
-    else:
-        return chr(asci)
+     return chr((ord(letter) - ord('a') + n)%26 + ord('a'))
 
 
 print shift_n_letters('s', 1)
