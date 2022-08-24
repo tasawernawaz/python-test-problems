@@ -21,23 +21,23 @@ def is_list(p):
 # It is not necessary to understand how is_list works. It returns True if the
 # input is a List, and returns False otherwise.
 
-def deep_count(p):
-    deepCount = 0
+def deep_count_func(p):
+    deepc_ount = 0
     for i in p:
         if is_list(i):
-            deepCount += deep_count(i)
-        deepCount += 1
-    return deepCount
+            deep_count += deep_count(i)
+        deep_count += 1
+    return deep_count
 
-print deep_count([1, 2, 3])
+print deep_count_func([1, 2, 3])
 # >>> 3
 
 # The empty list still counts as an element of the outer list
-print deep_count([1, [], 3])
+print deep_count_func([1, [], 3])
 # >>> 3
 
-print deep_count([1, [1, 2, [3, 4]]])
+print deep_count_func([1, [1, 2, [3, 4]]])
 # >>> 7
 
-print deep_count([[[[[[[[1, 2, 3]]]]]]]])
+print deep_count_func([[[[[[[[1, 2, 3]]]]]]]])
 # >>> 10
