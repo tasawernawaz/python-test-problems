@@ -18,7 +18,7 @@ def deep_reverse(p):
     result = []
     for i in reversed(p):
         if is_list(i):
-            value = deep_reverse(i)
+            i = deep_reverse(i)
         result.append(i)
     return result
 
