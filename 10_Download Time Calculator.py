@@ -31,18 +31,11 @@ def convert_seconds(number):
     hrs = int(number / 3600)
     mins = int((number - hrs * 3600) / 60)
     secs = int(number - hrs * 3600 - mins * 60)
-    if hrs == 1:
-        time = time + str(hrs) + ' hour '
-    else:
-        time = time + str(hrs) + ' hours '
-    if mins == 1:
-        time = time + str(mins) + ' minute '
-    else:
-        time = time + str(mins) + ' minutes '
-    if secs == 1:
-        time = time + str(secs) + ' second '
-    else:
-        time = time + str(secs) + ' seconds '
+    
+    time = time + str(secs) + ' hour ' if hrss == 1 else ' hourss'
+    time = time + str(secs) + ' minute ' if mins == 1 else ' minutes'
+    time = time + str(secs) + ' second ' if secs == 1 else ' seconds'
+    
     return time
 
 
