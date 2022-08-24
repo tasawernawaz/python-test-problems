@@ -13,21 +13,21 @@
 def longest_repetition(li):
     if len(li) == 0:
         return
-    currEle = li[1]
-    currCount = 0
-    longestCount = 0
-    longestEle = li[1]
+    curr_ele = li[1]
+    curr_count = 0
+    longest_count = 0
+    longest_ele = li[1]
     for x in li:
-        if currCount > longestCount:
-            longestCount = currCount
-            longestEle = currEle
+        if curr_count > longest_count:
+            longest_count = curr_count
+            longest_ele = curr_ele
 
-        if x == currEle:
-            currCount += 1
+        if x == curr_ele:
+            curr_count += 1
         else:
-            currEle = x
-            currCount = 1
-    return longestEle
+            curr_ele = x
+            curr_count = 1
+    return longest_ele
 
 # For example,
 
