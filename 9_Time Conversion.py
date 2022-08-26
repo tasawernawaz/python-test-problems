@@ -1,9 +1,10 @@
 # coding: utf-8
 
-# Write a procedure, convert_seconds, which takes as input a non-negative
-# number of seconds and returns a string of the form 
-# '<integer> hours, <integer> minutes, <number> seconds' but
-# where if <integer> is 1 for the number of hours or minutes, 
+# Write a procedure, convert_seconds, 
+# which takes as input a non-negative
+# number of seconds and returns a string of the form
+# '<integer> hours, <integer> minutes, <number> seconds'
+# where if <integer> is 1 for the number of hours or minutes,
 # then it should be hour/minute. Further, <number> may be an integer
 # or decimal, and if it is 1, then it should be followed by second.
 # You might need to use int() to turn a decimal into a float depending
@@ -15,7 +16,7 @@
 
 def convert_seconds(number):
     time = ''
-    hrs = int(number / 3600)
+    hrs = int(number / 360
     mins = int((number - hrs * 3600) / 60)
     secs = int(number - hrs * 3600 - mins * 60)
     if hrs == 1:
@@ -31,6 +32,7 @@ def convert_seconds(number):
     else:
         time = time + str(secs) + ' seconds '
     return time
+
 
 print convert_seconds(3661)
 # >>> 1 hour, 1 minute, 1 second
