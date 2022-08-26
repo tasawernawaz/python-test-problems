@@ -23,7 +23,8 @@
 #                1 4 6 4 1
 #                   ...
 
-# Each number is the sum of the number above it to the left and the number above
+# Each number is the sum of the number above it to
+# the left and the number above
 # it to the right (any missing numbers are counted as 0).
 
 # Define a procedure, triangle(n), that takes a number n as its input, and
@@ -68,4 +69,5 @@ print(triangle(3))
 
 print(triangle(6))
 
-# >>> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+# >>> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1],
+# [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
