@@ -1,5 +1,3 @@
-
-
 # coding: utf-8
 
 # THREE GOLD STARS
@@ -80,23 +78,23 @@ def check_sudoku(matrix):
     return True
 
 
-print (check_sudoku(incorrect))
+print(check_sudoku(incorrect))
 # >>> False
 
-print (check_sudoku(correct))
+print(check_sudoku(correct))
 # >>> True
 
-print (check_sudoku(incorrect2))
+print(check_sudoku(incorrect2))
 # >>> False
 
-print (check_sudoku(incorrect3))
+print(check_sudoku(incorrect3))
 # >>> False
 
-print (check_sudoku(incorrect4))
+print(check_sudoku(incorrect4))
 # >>> False
 
-print (check_sudoku(incorrect5))
+print(check_sudoku(incorrect5))
 # >>> False
 
-print (check_sudoku(matrix6))
+print(check_sudoku(matrix6))
 # >>> False
