@@ -43,6 +43,7 @@ print out
 # print out
 # >>> ['After', 'the', 'flood', 'all', 'the', 'colors', 'came', 'out']
 
-# out = split_string("First Name,Last Name,Street Address,City,State,Zip Code",",")
+# out = split_string("First Name,Last Name,
+Street Address,City,State,Zip Code",",")
 # print out
 # >>>['First Name', 'Last Name', 'Street Address', 'City', 'State', 'Zip Code']
