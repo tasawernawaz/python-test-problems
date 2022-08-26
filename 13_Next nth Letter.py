@@ -6,14 +6,14 @@
 # negative or zero.
 
 def shift_n_letters(letter, n):
-     return chr((ord(letter) - ord('a') + n)%26 + ord('a'))
+    return chr((ord(letter) - ord('a') + n) % 26 + ord('a'))
 
 
-print shift_n_letters('s', 1)
+print(shift_n_letters('s', 1))
 # >>> t
-print shift_n_letters('s', 2)
+print(shift_n_letters('s', 2))
 # >>> u
-print shift_n_letters('s', 10)
+print(shift_n_letters('s', 10))
 # >>> c
-print shift_n_letters('s', -10)
+print(shift_n_letters('s', -10))
 # >>> i
