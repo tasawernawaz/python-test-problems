@@ -61,6 +61,7 @@ incorrect5 = [[1, 1.5],
 
 matrix6 = [[1, 1.5, 3], [3, 1, 1.5], [1.5, 3, 1]]
 
+
 def check_sudoku(matrix):
     size = len(matrix)
     for row in matrix:
@@ -68,15 +69,16 @@ def check_sudoku(matrix):
         for i in row:
             if i not in num_list:
                 return False
-             num_list.remove(i)
+            num_list.remove(i)
 
     for j in range(len(matrix[0])):
         num_list = list(range(1, size + 1))
-        for col in square:
+        for col in matrix:
             if col[j] not in num_list:
                 return False
             num_list.remove(col[j])
     return True
+
 
 print (check_sudoku(incorrect))
 # >>> False
