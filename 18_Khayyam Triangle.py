@@ -1,12 +1,17 @@
 # coding: utf-8
 
-
 # Khayyam Triangle
 
-# The French mathematician, Blaise Pascal, who built a mechanical computer in
-# the 17th century, studied a pattern of numbers now commonly known in parts of
-# the world as Pascal's Triangle (it was also previously studied by many Indian,
-# Chinese, and Persian mathematicians, and is known by different names in other
+# The French mathematician,
+# Blaise Pascal, who built a mechanical computer in
+# the 17th century,
+# studied a pattern of numbers
+# now commonly known in parts of
+# the world as Pascal's Triangle
+#
+# (it was also previously studied by many Indian,
+# Chinese, and Persian mathematicians,
+# and is known by different names in other
 # parts of the world).
 
 # The pattern is shown below:
@@ -25,7 +30,6 @@
 # returns a list of the first n rows in the triangle. Each element of the
 # returned list should be a list of the numbers at the corresponding row in the
 # triangle.
-
 
 def triangle(n):
     tri = []
@@ -47,16 +51,21 @@ def triangle(n):
 # For example:
 
 print triangle(0)
+
 # >>> []
 
 print triangle(1)
+
 # >>> [[1]]
 
 print triangle(2)
+
 # >> [[1], [1, 1]]
 
 print triangle(3)
+
 # >>> [[1], [1, 1], [1, 2, 1]]
 
 print triangle(6)
+
 # >>> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
