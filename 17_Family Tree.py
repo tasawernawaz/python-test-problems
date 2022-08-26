@@ -1,55 +1,82 @@
 # coding: utf-8
 
+# Dictionaries of Dictionaries (of Dictionaries)
 
-# Family Trees
+# The next several questions concern the 
+# data structure below for keeping
+# track of Udacity's courses (where all of the values are strings):
 
-# In the lecture, we showed a recursive definition for your ancestors. For this
-# question, your goal is to define a procedure that finds someone's ancestors,
-# given a Dictionary that provides the parent relationships.
+#    { <hexamester>, { <class>: { <property>: <value>, ... },
+#           ... },
+#      ... }
 
-# Here's an example of an input Dictionary:
-#
-#	{<person>: [<father>, <mother>], … }
-#
+courses = {
+    'feb2012': {'cs101': {'name': 'Building a Search Engine',
+                          'teacher': 'Dave',
+                          'assistant': 'Peter C.'},
+                'cs373': {'name': 'Programming a Robotic Car',
+                          'teacher': 'Sebastian',
+                          'assistant': 'Andy'}},
+    'apr2012': {'cs101': {'name': 'Building a Search Engine',
+                          'teacher': 'Dave',
+                          'assistant': 'Sarah'},
+                'cs212': {'name': 'The Design of Computer Programs',
+                          'teacher': 'Peter N.',
+                          'assistant': 'Andy',
+                          'prereq': 'cs101'},
+                'cs253': {'name': 'Web Application Engineering '
+                                  '- Building a Blog',
+                          'teacher': 'Steve',
+                          'prereq': 'cs101'},
+                'cs262': {'name': 'Programming Languages - Building a Web Browser',
+                          'teacher': 'Wes',
+                          'assistant': 'Peter C.',
+                          'prereq': 'cs101'},
+                'cs373': {'name': 'Programming a Robotic Car',
+                          'teacher': 'Sebastian'},
+                'cs387': {'name': 'Applied Cryptography',
+                          'teacher': 'Dave'}},
+    'jan2044': {'cs001': {'name': 'Building a Quantum Holodeck',
+                          'teacher': 'Dorina'},
+                'cs003': {'name': 'Programming a Robotic Robotics Teacher',
+                          'teacher': 'Jasper'},
+                }
+}
 
-ada_family = {'Judith Blunt-Lytton': ['Anne Isabella Blunt', 'Wilfrid Scawen Blunt'],
-              'Ada King-Milbanke': ['Ralph King-Milbanke', 'Fanny Heriot'],
-              'Ralph King-Milbanke': ['Augusta Ada King', 'William King-Noel'],
-              'Anne Isabella Blunt': ['Augusta Ada King', 'William King-Noel'],
-              'Byron King-Noel': ['Augusta Ada King', 'William King-Noel'],
-              'Augusta Ada King': ['Anne Isabella Milbanke', 'George Gordon Byron'],
-              'George Gordon Byron': ['Catherine Gordon', 'Captain John Byron'],
-              'John Byron': ['Vice-Admiral John Byron', 'Sophia Trevannion']}
+# For the following questions, you will find the
+#         for <key> in <dictionary>:
+#                    <block>
+# construct useful. This loops through the key values
+# in the Dictionary.  For
+# example, this procedure returns a list of all the courses
+# offered in the given
+# hexamester:
 
 
-# Define a procedure, ancestors(genealogy, person), that takes as its first input
-# a Dictionary in the form given above, and as its second input the name of a
-# person. It should return a list giving all the known ancestors of the input
-# person (this should be the empty list if there are none). The order of the list
-# does not matter and duplicates will be ignored.
+def courses_offered(courses, hexamester):
+    res = []
+    for c in courses[hexamester]:
+        res.append(c)
+    return res
 
-def ancestors(genealogy, person):
-    ancestory = []
-    temp = []
-    if person in genealogy:
-        ancestory.extend(genealogy[person])
 
-    for ancestor in ancestory:
-        if ancestor in genealogy:
-            ancestory.extend(ancestors(genealogy, ancestor))
+# Define a procedure, when_offered(courses, course),
+# that takes a courses data
+# structure and a string representing a class,
+# and returns a list of strings
+# representing the hexamesters when the input course is offered.
 
-    return ancestory
+def when_offered(courses, course):
+    hexamesters = []
+    for cour in courses:
+        offeredcourses = courses_offered(courses, cour)
+        if course in offeredcourses:
+            hexamesters.append(cour)
+    return hexamesters
 
-# Here are some examples:
 
-print ancestors(ada_family, 'Augusta Ada King')
-# >>> ['Anne Isabella Milbanke', 'George Gordon Byron',
-#    'Catherine Gordon','Captain John Byron']
+print(when_offered(courses, 'cs101'))
+# >>> ['apr2012', 'feb2012']
 
-print ancestors(ada_family, 'Judith Blunt-Lytton')
-# >>> ['Anne Isabella Blunt', 'Wilfrid Scawen Blunt', 'Augusta Ada King',
-#    'William King-Noel', 'Anne Isabella Milbanke', 'George Gordon Byron',
-#    'Catherine Gordon', 'Captain John Byron']
-
-print ancestors(ada_family, 'Dave')
+print(when_offered(courses, 'bio893'))
 # >>> []
