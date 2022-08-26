@@ -88,7 +88,7 @@ print download_time(13, 'GB', 5.6, 'Mb')
 # >>> 5 hours, 16 minutes, 57.1428571429 seconds
 
 print download_time(10, 'MB', 2, 'kB')
-# >>> 1 hour, 25 minutes, 20 seconds  
+# >>> 1 hour, 25 minutes, 20 seconds
 # 20.0 seconds is also acceptable
 
 print
