@@ -38,7 +38,7 @@ def numbers_in_lists(string):
 # testcases
 string1 = '543987'
 result = [5, [4, 3], 9, [8, 7]]
-print  repr(string1), numbers_in_lists(string1) == result
+print repr(string1), numbers_in_lists(string1) == result
 string1 = '987654321'
 result = [9, [8, 7, 6, 5, 4, 3, 2, 1]]
 print repr(string1), numbers_in_lists(string1) == result
