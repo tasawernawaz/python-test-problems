@@ -50,7 +50,8 @@ courses = {
 #         for <key> in <dictionary>:
 #                    <block>
 # construct useful. This loops through the key values in the Dictionary. For
-# example, this procedure returns a list of all the courses offered in the given
+# example, this procedure returns a list of all the
+# courses offered in the given
 # hexamester:
 
 def courses_offered(courses, hexamester):
@@ -60,12 +61,18 @@ def courses_offered(courses, hexamester):
     return res
 
 
-# [Double Gold Star] Define a procedure, involved(courses, person), that takes
-# as input a courses structure and a person and returns a Dictionary that 
-# describes all the courses the person is involved in.  A person is involved 
-# in a course if they are a value for any property for the course.  The output 
-# Dictionary should have hexamesters as its keys, and each value should be a 
-# list of courses that are offered that hexamester (the courses in the list 
+# [Double Gold Star] Define a procedure, involved(courses, person),
+# that takes
+# as input a courses structure and a person and returns a
+# Dictionary that
+# describes all the courses the person is involved in.
+# A person is involved
+# in a course if they are a value for any property for
+# the course.  The output
+# Dictionary should have hexamesters as its keys,
+# and each value should be a
+# list of courses that are offered that hexamester
+# (the courses in the list
 # can be in any order).
 
 
@@ -86,20 +93,20 @@ def involved(courses, person):
 
 # For example:
 
-print involved(courses, 'Dave')
+print(involved(courses, 'Dave'))
 # >>> {'apr2012': ['cs101', 'cs387'], 'feb2012': ['cs101']}
 
-print involved(courses, 'Peter C.')
+print(involved(courses, 'Peter C.'))
 # >>> {'apr2012': ['cs262'], 'feb2012': ['cs101']}
 
-print involved(courses, 'Dorina')
+print(involved(courses, 'Dorina'))
 # >>> {'jan2044': ['cs001']}
 
-print involved(courses, 'Peter')
+print(involved(courses, 'Peter'))
 # >>> {}
 
-print involved(courses, 'Robotic')
+print(involved(courses, 'Robotic'))
 # >>> {}
 
-print involved(courses, '')
+print(involved(courses, ''))
 # >>> {}
