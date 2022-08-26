@@ -1,6 +1,7 @@
 # coding: utf-8
 
-# Define a recursive procedure is_palindrome, that takes as input a string, and returns a
+# Define a recursive procedure is_palindrome, that takes as input a 
+# string, and returns a
 # Boolean indicating if the input string is a palindrome.
 
 # Base Case: '' => True
