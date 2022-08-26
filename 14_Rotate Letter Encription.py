@@ -3,23 +3,15 @@
 # Write a procedure, rotate which takes as its input a string of lower case
 # letters, a-z, and spaces, and an integer n,
 # and returns the string constructed
-# by shifting each of the letters n steps, and 
+# by shifting each of the letters n steps, and
 # leaving the spaces unchanged.
-# Note that 'a' follows 'z'. You can use an 
+# Note that 'a' follows 'z'. You can use an
 # additional procedure if you
 # choose to as long as rotate returns the correct string.
 # Note that n can be positive, negative or zero.
 
 def shift_n_letters(letter, n):
-    asci = ord(letter) + n  # 97-122
-    if asci > 122:
-        dif = asci - 122
-        return chr(dif + 96)
-    if asci < 97:
-        dif = 97 - asci
-        return chr(123 - dif)
-    else:
-        return chr(asci)
+    return chr(ord('a') + (ord(letter) - ord('a') + n) % 26)
 
 
 def rotate(string, number):
