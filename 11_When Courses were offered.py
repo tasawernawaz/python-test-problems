@@ -1,15 +1,13 @@
 # coding: utf-8
 
 # Dictionaries of Dictionaries (of Dictionaries)
-
-# The next several questions concern the data structure below for keeping
+# The next several questions concern the
+# data structure below for keeping
 # track of Udacity's courses (where all of the values are strings):
 
 #    { <hexamester>, { <class>: { <property>: <value>, ... },
-#                                     ... },
+#           ... },
 #      ... }
-
-# For example,
 
 courses = {
     'feb2012': {'cs101': {'name': 'Building a Search Engine',
@@ -29,8 +27,8 @@ courses = {
                                   '- Building a Blog',
                           'teacher': 'Steve',
                           'prereq': 'cs101'},
-                'cs262': {'name': 'Programming Languages - 
-                            Building a Web Browser',
+                'cs262': {'name': 'Programming Languages'
+                          ' - Building a Web Browser',
                           'teacher': 'Wes',
                           'assistant': 'Peter C.',
                           'prereq': 'cs101'},
@@ -45,7 +43,6 @@ courses = {
                 }
 }
 
-
 # For the following questions, you will find the
 #         for <key> in <dictionary>:
 #                    <block>
@@ -54,6 +51,7 @@ courses = {
 # example, this procedure returns a list of all the courses
 # offered in the given
 # hexamester:
+
 
 def courses_offered(courses, hexamester):
     res = []
