@@ -1,3 +1,9 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import re
+
+
 # coding: utf-8
 
 # The built-in <string>.split() procedure works
@@ -13,7 +19,6 @@
 # the source string up by the characters in the
 # splitlist.
 
-
 def split_string(source, splitlist):
     outputList = []
     word = ''
@@ -28,8 +33,10 @@ def split_string(source, splitlist):
     return outputList
 
 
-out = split_string("This is a test-of the,string separation-code!", " ,!-")
+out = split_string('This is a test-of the,string separation-code!',
+                   ' ,!-')
 print out
+
 # >>> ['This', 'is', 'a', 'test', 'of', 'the', 'string', 'separation', 'code']
 
 # out = split_string("After  the flood   ...  all the colors came out.", " .")
