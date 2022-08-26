@@ -1,9 +1,3 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-import re
-
-
 # coding: utf-8
 
 # The built-in <string>.split() procedure works
