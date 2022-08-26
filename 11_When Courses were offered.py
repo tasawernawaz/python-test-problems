@@ -25,10 +25,12 @@ courses = {
                           'teacher': 'Peter N.',
                           'assistant': 'Andy',
                           'prereq': 'cs101'},
-                'cs253': {'name': 'Web Application Engineering - Building a Blog',
+                'cs253': {'name': 'Web Application Engineering '
+                                  '- Building a Blog',
                           'teacher': 'Steve',
                           'prereq': 'cs101'},
-                'cs262': {'name': 'Programming Languages - Building a Web Browser',
+                'cs262': {'name':
+                        'Programming Languages - Building a Web Browser',
                           'teacher': 'Wes',
                           'assistant': 'Peter C.',
                           'prereq': 'cs101'},
@@ -47,8 +49,10 @@ courses = {
 # For the following questions, you will find the
 #         for <key> in <dictionary>:
 #                    <block>
-# construct useful. This loops through the key values in the Dictionary.  For
-# example, this procedure returns a list of all the courses offered in the given
+# construct useful. This loops through the key values
+# in the Dictionary.  For
+# example, this procedure returns a list of all the courses
+# offered in the given
 # hexamester:
 
 def courses_offered(courses, hexamester):
@@ -58,8 +62,10 @@ def courses_offered(courses, hexamester):
     return res
 
 
-# Define a procedure, when_offered(courses, course), that takes a courses data
-# structure and a string representing a class, and returns a list of strings
+# Define a procedure, when_offered(courses, course),
+# that takes a courses data
+# structure and a string representing a class,
+# and returns a list of strings
 # representing the hexamesters when the input course is offered.
 
 def when_offered(courses, course):
@@ -70,8 +76,9 @@ def when_offered(courses, course):
             hexamesters.append(cour)
     return hexamesters
 
-print when_offered(courses, 'cs101')
+
+print(when_offered(courses, 'cs101'))
 # >>> ['apr2012', 'feb2012']
 
-print when_offered(courses, 'bio893')
+print(when_offered(courses, 'bio893'))
 # >>> []
