@@ -29,7 +29,8 @@ courses = {
                                   '- Building a Blog',
                           'teacher': 'Steve',
                           'prereq': 'cs101'},
-                'cs262': {'name': 'Programming Languages - Building a Web Browser',
+                'cs262': {'name': 'Programming Languages - 
+                            Building a Web Browser',
                           'teacher': 'Wes',
                           'assistant': 'Peter C.',
                           'prereq': 'cs101'},
