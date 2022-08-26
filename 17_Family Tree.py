@@ -1,8 +1,7 @@
 # coding: utf-8
 
 # Dictionaries of Dictionaries (of Dictionaries)
-
-# The next several questions concern the 
+# The next several questions concern the
 # data structure below for keeping
 # track of Udacity's courses (where all of the values are strings):
 
@@ -28,7 +27,8 @@ courses = {
                                   '- Building a Blog',
                           'teacher': 'Steve',
                           'prereq': 'cs101'},
-                'cs262': {'name': 'Programming Languages - Building a Web Browser',
+                'cs262': {'name': 'Programming Languages'
+                                  ' - Building a Web Browser',
                           'teacher': 'Wes',
                           'assistant': 'Peter C.',
                           'prereq': 'cs101'},
