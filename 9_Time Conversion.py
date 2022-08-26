@@ -1,6 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import re
+
+
 # coding: utf-8
 
-# Write a procedure, convert_seconds, 
+# Write a procedure, convert_seconds,
 # which takes as input a non-negative
 # number of seconds and returns a string of the form
 # '<integer> hours, <integer> minutes, <number> seconds'
@@ -11,12 +17,12 @@
 # on how you code this. int(3.0) gives 3
 #
 # Note that English uses the plural when talking about 0 items, so
-# it should be "0 minutes".
+# it should be "0 minutes".a
 #
 
 def convert_seconds(number):
     time = ''
-    hrs = int(number / 360
+    hrs = int(number / 360)
     mins = int((number - hrs * 3600) / 60)
     secs = int(number - hrs * 3600 - mins * 60)
     if hrs == 1:
@@ -35,10 +41,13 @@ def convert_seconds(number):
 
 
 print convert_seconds(3661)
+
 # >>> 1 hour, 1 minute, 1 second
 
 print convert_seconds(7325)
+
 # >>> 2 hours, 2 minutes, 5 seconds
 
 print convert_seconds(7261.7)
+
 # >>> 2 hours, 1 minute, 1.7 seconds
